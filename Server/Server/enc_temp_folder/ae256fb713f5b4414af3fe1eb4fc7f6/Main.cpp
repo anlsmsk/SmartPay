@@ -13,12 +13,12 @@ void on_initialize(const string_t& address)
     // Build our listener's URI from the configured address and the hard-coded path "Server/Action"
 
     uri_builder uri(address);
-    // its request path 
     uri.append_path(U("smartpay/payment/"));
 
     auto addr = uri.to_uri().to_string();
 
-   
+    
+
 	g_http = std::unique_ptr<Server>(new Server(addr));
 	g_http->open().wait();
     
@@ -26,7 +26,7 @@ void on_initialize(const string_t& address)
 
     return;
 }
-//before close application its wait connection close
+
 void on_shutdown()
 {
 	g_http->close().wait();
@@ -35,7 +35,6 @@ void on_shutdown()
 
 int wmain(int argc, wchar_t *argv[])
 {
-    // port to test rest api
     utility::string_t port = U("34568");
     if(argc == 2)
     {
