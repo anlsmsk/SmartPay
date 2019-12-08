@@ -16,6 +16,9 @@ void on_initialize(const string_t& address)
     uri.append_path(U("smartpay/payment/"));
 
     auto addr = uri.to_uri().to_string();
+
+    
+
 	g_http = std::unique_ptr<Server>(new Server(addr));
 	g_http->open().wait();
     

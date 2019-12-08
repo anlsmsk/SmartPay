@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="README.md">
-      <Filter>Kaynak Dosyalar</Filter>
-    </None>
     <None Include="packages.config" />
+    <None Include="README.md">
+      <Filter>Üst Bilgi Dosyaları</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Server.cpp">
@@ -32,14 +32,14 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Server.h">
-      <Filter>Kaynak Dosyalar</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>Kaynak Dosyalar</Filter>
     </ClInclude>
     <ClInclude Include="messagetypes.h">
-      <Filter>Kaynak Dosyalar</Filter>
+      <Filter>Üst Bilgi Dosyaları</Filter>
+    </ClInclude>
+    <ClInclude Include="Server.h">
+      <Filter>Üst Bilgi Dosyaları</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
